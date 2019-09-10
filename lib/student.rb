@@ -3,7 +3,11 @@ require_relative "../config/environment.rb"
 class Student
 attr_accessor :name, :grade, :id 
 
+<<<<<<< HEAD
 def initialize(id = nil, name, grade)
+=======
+def initialize(name, grade, id = nil)
+>>>>>>> e3e3f06e3af89c1fe2ff9d46d54db4dd100afa2f
   @name = name 
   @grade = grade
   @id = id
@@ -48,6 +52,7 @@ end
 
 def self.new_from_db(row)
   new_student = self.new(row[0], row[1], row[2])
+<<<<<<< HEAD
   new_student
 end 
   
@@ -59,4 +64,9 @@ def self.find_by_name(name)
     self.new_from_db(row)
   end.first
 end 
+=======
+  
+end 
+  
+>>>>>>> e3e3f06e3af89c1fe2ff9d46d54db4dd100afa2f
 end
